@@ -341,6 +341,7 @@ const addBlock = (blockname, template, color, params, _class, func, skeleton = '
 console.log('//Thank you for kang87y');
 console.log('//Made by junj83333');
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
 addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
     color: '#6E5BE5',
     outerline: '#6666CB',
