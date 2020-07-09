@@ -358,3 +358,32 @@ addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
         return false;
     }
 }, 'basic_boolean_field')
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Entry.staticBlocks.push({
+    category: 'API', blocks: [
+	    'boost_mode'
+    ]
+});
+
+
+updateCategory('API')
+
+$('head').append(`
+<style>
+#entryCategoryAPI {
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    margin-bottom: 1px;
+}
+.entrySelectedCategory#entryCategoryAPI {
+    background-color: #000000;
+    border-color: #778899;
+    color: #fff;
+}
+</style>
+`)
+
+$('#entryCategoryAPI').append('뉴')	    
