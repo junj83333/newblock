@@ -349,7 +349,7 @@ const addBlock = (blockname, template, color, params, _class, func, skeleton = '
 }
 
 console.log('//Thank you for kang87y');
-console.log('//Made by junj83333');
+console.log('//Made by junj83333(encube)');
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
@@ -374,6 +374,7 @@ addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
 addBlock('big_big', '대형화면 만들기%2', {
     color: EntryStatic.colorSet.block.default.START,
     outerline: EntryStatic.colorSet.block.darken.START
+}, {
     params: [
         {
             type: 'Block',
@@ -394,8 +395,8 @@ addBlock('big_big', '대형화면 만들기%2', {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 addBlock('com_browser', '컴퓨터명 (브라우저명)', {
-    color: EntryStatic.colorSet.block.default.HARDWAR,
-    outerline: EntryStatic.colorSet.block.darken.HARDWAR
+color: EntryStatic.colorSet.block.default.HARDWAR,
+outerLine: EntryStatic.colorSet.block.darken.HARDWAR
 }, {
 params: [],
 def: [],
@@ -432,4 +433,4 @@ $('head').append(`
 </style>
 `)
 
-$('#entryCategoryAPI').append('뉴블록')	    
+$('#entryCategoryAPI').append('뉴블록')	  
