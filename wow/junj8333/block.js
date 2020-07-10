@@ -394,7 +394,7 @@ addBlock('big_big', '대형화면 만들기%2', {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-addBlock('com_browser', '컴퓨터이름 (브라우저이름)', {
+addBlock('com_browser', '컴퓨터명 (브라우저명)', {
 color: EntryStatic.colorSet.block.default.HARDWAR,
 outerLine: EntryStatic.colorSet.block.darken.HARDWAR
 }, {
@@ -407,11 +407,58 @@ return Entry.userAgent
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+addBlock('entry_test', '%1 제목과 %2 내용을 엔트리이야기에 올리기%3', {
+color: EntryStatic.colorSet.block.default.HARDWAR,
+outerLine: EntryStatic.colorSet.block.darken.HARDWAR
+}, {
+params: [
+{
+type: 'Block',
+accept: 'string'
+},
+{
+type: 'Block',
+accept: 'string'
+},
+{
+type: 'Indicator',
+img: 'block_icon/hardware_icon.svg',
+size: 11,
+}
+],
+def: [
+{
+type: 'text',
+params: [`악용될시`]
+},
+{
+type: 'text',
+params: [`차단됩니다`]
+},
+null
+],
+map: {
+TITLE: 0,
+CONTENT: 1
+}
+}, 'text', (sprite, script) => {confirm("이 작품을 엔트리 이야기에 올릴까요?")
+fetch('https://playentry.org/api/discuss/', {
+method: 'POST',
+body: `{ "images": [], "category": "free", "title": "${script.getValue('TITLE', script)}", "content": "${script.getValue('CONTENT', script)}", "groupNotice": false }`,
+headers: {
+'Content-Type': 'application/json'
+}
+})
+return script.callReturn()
+				
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Entry.staticBlocks.push({
     category: 'API', blocks: [
 	    'boost_mode',
 	    'big_big',
-	    'com_browser'
+	    'com_browser',
+	    'entry_test
     ]
 });
 
