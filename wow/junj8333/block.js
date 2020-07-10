@@ -371,7 +371,9 @@ addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-addBlock('didScroll', '스크롤을 하였는가? ', {
+addBlock('didScroll', '스크롤을 했는가? ', {
+	    color: '#6E5BE5',
+            outerline: '#6666CB',
 }, {
 params: [
 ],
@@ -394,8 +396,11 @@ return true;
 }
 }, 'basic_boolean_field')
 
-//////////////////////////////////////////////////////////////////
-addBlock('scrollHandle', '스크롤 방향(위,아래)', {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+addBlock('scrollHandle', '스크롤(위,아래)', {
+	    color: '#6E5BE5',
+            outerline: '#6666CB',
 }, {
 params: [],
 def: [],
@@ -433,7 +438,9 @@ if (delta) handle(delta);
 
 Entry.staticBlocks.push({
     category: 'API', blocks: [
-	    'boost_mode'
+	    'boost_mode',
+	    'didScroll',
+	    'ScrollHandle'
     ]
 });
 
@@ -449,8 +456,8 @@ $('head').append(`
     margin-bottom: 1px;
 }
 .entrySelectedCategory#entryCategoryAPI {
-    background-color: #000000;
-    border-color: #778899;
+    background-color: #000001;
+    border-color: #778893;
     color: #fff;
 }
 </style>
