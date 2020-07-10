@@ -371,76 +371,9 @@ addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-addBlock('didScroll', '스크롤을 했는가? ', {
-	    color: '#6E5BE5',
-            outerline: '#6666CB',
-}, {
-params: [
-],
-def: [],
-map: {},
-class: 'scroll'
-}, 'text', (sprite, script) => {
-var didScroll;
-$(window).scroll(function(event){
-didScroll = true;
-});
-setInterval(function() {
-if (didScroll) {
-hasScrolled();
-didScroll = false;
-}
-}, 250);
-function hasScrolled() {
-return true;
-}
-}, 'basic_boolean_field')
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-addBlock('scrollHandle', '스크롤(위,아래)', {
-	    color: '#6E5BE5',
-            outerline: '#6666CB',
-}, {
-params: [],
-def: [],
-map: {},
-class: 'day'
-}, 'text', (sprite, script) => {
-if (window.addEventListener)
-window.addEventListener('DOMMouseScroll', wheel, false);
-window.onmousewheel = document.onmousewheel = wheel;
-
-function handle(delta) {
-var s = delta + ": ";
-if (delta < 0) {
-return('아래');
-}
-else {
-return('위');
-}
-}
-
-
-function wheel(event){
-var delta = 0;
-if (!event) event = window.event;
-if (event.wheelDelta) {
-delta = event.wheelDelta/120;
-if (window.opera) delta = -delta;
-} else if (event.detail) delta = -event.detail/3;
-if (delta) handle(delta);
-}
-
-}, 'basic_string_field');
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 Entry.staticBlocks.push({
     category: 'API', blocks: [
-	    'boost_mode',
-	    'didScroll',
-	    'ScrollHandle'
+	    'boost_mode'
     ]
 });
 
