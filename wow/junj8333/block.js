@@ -353,8 +353,8 @@ console.log('//Made by junj83333(encube)');
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
-    color: '#0040FF',
-    outerline: '##2E2EFE',
+    color: '#0404B4',
+    outerline: '#2E2EFE',
 }, {
     params: [
     ],
@@ -415,7 +415,6 @@ Entry.staticBlocks.push({
     ]
 });
 
-
 updateCategory('API')
 
 $('head').append(`
@@ -434,4 +433,4 @@ $('head').append(`
 </style>
 `)
 
-$('#entryCategoryAPI').append('뉴')	    
+$('#entryCategoryAPI').append('뉴블록')	    
