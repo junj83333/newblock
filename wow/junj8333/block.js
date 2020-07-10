@@ -371,9 +371,33 @@ addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+addBlock('big_big', '대형화면 만들기%2', {
+    color: EntryStatic.colorSet.block.default.START,
+    outerline: EntryStatic.colorSet.block.darken.START
+}, {
+    params: [
+        {
+            type: 'Block',
+            accept: 'string'
+        },
+        {
+            type: 'Indicator',
+            img: 'block_icon/start_icon.svg',
+            size: 11,
+        },
+    ],
+    def: [null],
+    class: 'stop_projects'
+}, 'text', (sprite, script) => {
+    Entry.engine.toggleFullScreen();
+})
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Entry.staticBlocks.push({
     category: 'API', blocks: [
-	    'boost_mode'
+	    'boost_mode',
+	    'big_big'
     ]
 });
 
