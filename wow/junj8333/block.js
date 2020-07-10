@@ -353,8 +353,8 @@ console.log('//Made by junj83333(encube)');
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
-    color: '#6E5BE5',
-    outerline: '#6666CB',
+    color: '#0040FF',
+    outerline: '##2E2EFE',
 }, {
     params: [
     ],
@@ -394,10 +394,24 @@ addBlock('big_big', '대형화면 만들기%2', {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+addBlock('com_browser', '컴퓨터이름 (브라우저이름)', {
+color: EntryStatic.colorSet.block.default.HARDWAR,
+outerLine: EntryStatic.colorSet.block.darken.HARDWAR
+}, {
+params: [],
+def: [],
+map: {}
+}, 'text', (sprite, script) => {
+return Entry.userAgent
+}, 'basic_string_field')
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Entry.staticBlocks.push({
     category: 'API', blocks: [
 	    'boost_mode',
-	    'big_big'
+	    'big_big',
+	    'com_browser'
     ]
 });
 
