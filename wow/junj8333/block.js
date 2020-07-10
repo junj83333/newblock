@@ -372,8 +372,8 @@ addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 addBlock('big_big', '대형화면 만들기%2', {
-    color: '#0404B4',
-    outerline: '#2E2EFE',
+    color: EntryStatic.colorSet.block.default.START,
+    outerline: EntryStatic.colorSet.block.darken.START
     params: [
         {
             type: 'Block',
@@ -394,8 +394,8 @@ addBlock('big_big', '대형화면 만들기%2', {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 addBlock('com_browser', '컴퓨터명 (브라우저명)', {
-    color: '#0404B4',
-    outerline: '#2E2EFE',
+    color: EntryStatic.colorSet.block.default.HARDWAR,
+    outerline: EntryStatic.colorSet.block.darken.HARDWAR
 }, {
 params: [],
 def: [],
