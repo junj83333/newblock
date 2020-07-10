@@ -318,6 +318,16 @@ const updateCategory = (category, options) => {
             $(`#entryCategory${category}`)[0].innerText = options.name
         }
     }
+}
+
+// var link = document.location.href;
+//if (link === 'https://playentry.org/ws#!/') {
+//	var color_set = prompt('블럭 색상을 지정해주세요\n[basic:기본, START:카테고리 색상, #??????:지정 색상]', 'basic');
+//        if  (color_set.toUpperCase === 'BASIC') {
+//		
+//	}
+//} else {
+//}
 	
 const addBlock = (blockname, template, color, params, _class, func, skeleton = 'basic') => {
     Entry.block[blockname] = {
@@ -339,7 +349,7 @@ const addBlock = (blockname, template, color, params, _class, func, skeleton = '
 }
 
 console.log('//Thank you for kang87y');
-console.log('//Made by junj83333');
+console.log('//Made by junj83333(encube)');
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 addBlock('boost_mode', '부스트모드가 켜져있나?  ', {
